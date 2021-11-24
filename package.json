@@ -19,5 +19,8 @@
   "homepage": "https://github.com/csc309-fall-2021/js-library-arpacion#readme",
   "dependencies": {
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }
