@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>JS Libraries</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.3.1/build/styles/default.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.3.1/build/highlight.min.js"></script>
+
+    <link rel="stylesheet" href="segmented_progress_bar.css" />
+    <link rel="stylesheet" href="example.css" />
+
+    <script
+      defer
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    ></script>
+
+    <script defer >hljs.highlightAll();</script>
+  </head>
+  <body>
+    <div class='page_title'>
+      <h1>Documentation</h1>
+    </div>
+    <div class='documentation'>
+        <h2>Getting Started</h2>
+        <p>Download the CSS and JS files</p>
+        <a href="segmented_progress_bar.js" download class="files" >segmented_progress_bar.js</a>
+        <br>
+        <a href="segmented_progress_bar.css" download class="files" >segmented_progress_bar.css</a>
+        <br>
+        <p>Import the source files and JQuery</p>
+        <pre><code class="language-html">&ltlink rel="stylesheet" href="segmented_progress_bar.css" /&gt
+
+&ltscript defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" &gt&lt/script&gt
+
+&ltscript defer type="text/javascript" src="segmented_progress_bar.js" &gt&lt/script&gt</code></pre>
+        <br>
+        <p>Create a div for the Segmented Progress Bar in your html body. Give it an id and give the class "spb"</p>
+        <pre><code class="language-html">&ltdiv id="example_spb" class="spb"&gt&lt/div&gt</code></pre>
+        <br>
+        <p>Initiliaze Segmented Progres Bar in your code</p>
+        <pre><code class="language-javascript">// Create the config object and set the preffered options
+const spb_config = {
+    length: 500,
+    horizontal: true,
+    segmentHoverColor: '#1ae300',
+}
+
+// Create the spb object by giving the div id and config object as arguments
+const spb1 = spb('#example_spb', spb_config);
+
+// Add segments and give their titles and percentages as arguments
+spb1.addSegment('Uploading the setup files are to the server', 12);
+spb1.addSegment('Extracting files', 15);
+spb1.addSegment('Installing Dependencies', 18);
+spb1.addSegment('Install the Ipsum software', 30);
+spb1.addSegment('Delete setup files', 15);
+spb1.addSegment('Run the server', 10);</code></pre>
+        <h2>API Documentation</h2>
+        <h3>spb(selector, config)</h3>
+        <p>Main library function, takes a selector string for selecting the spb div, and takes a config object for layout and styling options. Returns a spb object</p>
+        <h3>.addSegment(title, percentage)</h3>
+        <p>Crates a segment for the spb. Takes a title string and a percentage number. When finished adding segments sum of percentages should be equal to 100. Created segments have index numbers in the order they have been created</p>
+        <h3>.updateStatus(index, percentage)</h3>
+        <p>Updates the status of a particular segment. Takes the index of the segment and the percentage that will be updated as arguments</p>
+        <h3>.updateDescription(index, title)</h3>
+        <p>Updates the description of a particular segment. Takes the index of the segment and the title that will be updated as arguments. Generally used when the segment is finished.</p>
+        <h3>.log(index, percentage)</h3>
+        <p>Used for inserting a single line of log to a particular segment. Takes the index of the segment and the log string that will be pushed to the log list.</p>
+        <h2>Config options</h2>
+        <h3>width</h3>
+        <p>Type: String. Width of the spb in pixels</p>
+        <h3>height</h3>
+        <p>Type: Number. length of the spb. Used for segment partititon, so it needs to be number</p>
+        <h3>horizontal</h3>
+        <p>Type: Boolean. If true, the horizontal layout will be used, vertical otherwise.</p>
+        <h3>backgroundColor</h3>
+        <p>Type: String. css compatible color code of the spb background</p>
+        <h3>logBackgroundColor</h3>
+        <p>Type: String. css compatible color code of the log window background</p>
+        <h3>segmentBackgroundColor</h3>
+        <p>Type: String. css compatible color code of the process segment background</p>
+        <h3>statusColor</h3>
+        <p>Type: String. css compatible color code of the process status</p>
+        <h3>segmentHoverColor</h3>
+        <p>Type: String. css compatible color code of the process segment border when hovered with mouse</p>
+        <h3>totalStatusColor</h3>
+        <p>Type: String. css compatible color code of the total status percentage</p>
+    </div>
+  </body>
+</html>

@@ -9,8 +9,8 @@ const spb_config = {
     horizontal: true,
     //backgroundColor: '#8784f0',
     //segmentBackgroundColor: '#8784f9',
-    segmentHoverColor: '#8784f0',
-    //totalStatusColor: '#8784f0',
+    segmentHoverColor: '#d6e4ff',
+
 }
 
 const spb1 = spb('#example_spb', spb_config);
@@ -24,10 +24,11 @@ spb1.addSegment('Run the server', 10);
 const spb_config_2 = {
     length: 500,
     horizontal: false,
-    //backgroundColor: '#8784f0',
-    //logBackgroundColor: '#8784f0',
-    //segmentBackgroundColor: '#8784f9',
+    backgroundColor: '#9ebbf0',
+    logBackgroundColor: '#ebf1fc',
+    segmentBackgroundColor: '#ebf1fc',
     statusColor: '#8784f0',
+    totalStatusColor: 'white',
 }
 
 const spb2 = spb('#example_spb_2', spb_config_2);

@@ -1,0 +1,46 @@
+body{
+    background-color: #abb7cc;
+}
+
+.page_title {
+    width: 50%;
+    align-items: center;
+    margin: auto;
+    font-family: Helvetica, sans-serif;
+}
+
+#documentation {
+    text-decoration: none;
+}
+
+.examples {
+    width: 50%;
+    align-items: center;
+    margin: auto;
+    font-family: Helvetica, sans-serif;
+}
+
+
+.spb {
+    margin: 10px
+}
+
+pre {
+    margin: 10px
+}
+
+.documentation {
+    width: 50%;
+    align-items: center;
+    margin: auto;
+    font-family: Helvetica, sans-serif;
+    overflow: scroll;
+}
+
+code{
+    box-shadow: inset -1px 1px 4px rgba(0, 0, 0, 0.25);
+}
+
+.documentation h3 {
+    font-family: monospace;
+}

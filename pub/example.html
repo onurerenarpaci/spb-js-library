@@ -6,7 +6,11 @@
 
     <title>JS Libraries</title>
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.3.1/build/styles/default.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.3.1/build/highlight.min.js"></script>
+
     <link rel="stylesheet" href="segmented_progress_bar.css" />
+    <link rel="stylesheet" href="example.css" />
 
     <script
       defer
@@ -20,9 +24,61 @@
     ></script>
 
     <script defer type="text/javascript" src="example.js"></script>
+    <script defer >hljs.highlightAll();</script>
   </head>
   <body>
-    <div id="example_spb" class="spb"></div>
-    <div id="example_spb_2" class="spb"></div>
+    <div class="page_title">
+      <h1>Segmented Progress Bar</h1>
+      <p>
+        Segmented Progress Bar is a vanilla JavaScript library which offers a
+        more advanced feedback about the ongoing progress compared to
+        conventional progress bars for end users. Conventional progress
+        indicators are either too simple giving almost no useful data or just a
+        plain console output with no visualization of that output, Segmented
+        Progress Bar gives the best of the two worlds.
+      </p>
+      <h2><a href="documentation.html" id="documentation">Documentation</a></h2>
+      <h2>Examples</h2>
+    </div>
+    <div class="examples">
+      <h3>Horizontal layout example</h3>
+      <pre><code class="language-javascript">
+const spb_config = {
+  length: 500,
+  horizontal: true,
+  segmentHoverColor: '#1ae300',
+}
+
+const spb1 = spb('#example_spb', spb_config);
+spb1.addSegment('Uploading the setup files are to the server', 12);
+spb1.addSegment('Extracting files', 15);
+spb1.addSegment('Installing Dependencies', 18);
+spb1.addSegment('Install the Ipsum software', 30);
+spb1.addSegment('Delete setup files', 15);
+spb1.addSegment('Run the server', 10);
+      </code></pre>
+      <div id="example_spb" class="spb"></div>
+      <h3>Vertical layout example</h3>
+      <pre><code class="language-javascript">
+const spb_config_2 = {
+  length: 500,
+  horizontal: false,
+  backgroundColor: '#9ebbf0',
+  logBackgroundColor: '#ebf1fc',
+  segmentBackgroundColor: '#ebf1fc',
+  statusColor: '#8784f0',
+  totalStatusColor: 'white',
+}
+
+const spb2 = spb('#example_spb_2', spb_config_2);
+spb2.addSegment('Uploading the setup files are to the server', 12);
+spb2.addSegment('Extracting files', 15);
+spb2.addSegment('Installing Dependencies', 18);
+spb2.addSegment('Install the Ipsum software', 30);
+spb2.addSegment('Delete setup files', 15);
+spb2.addSegment('Run the server', 10);
+        </code></pre>
+      <div id="example_spb_2" class="spb"></div>
+    </div>
   </body>
 </html>
