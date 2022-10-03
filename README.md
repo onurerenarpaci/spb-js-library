@@ -1,3 +1,6 @@
+# Segmented Progress Bar
+This is a frontend vanilla JS library for creating segmented progress bars
+
 ## Deployed App Link: 
 https://still-cliffs-27435.herokuapp.com/example.html
 
