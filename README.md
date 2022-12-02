@@ -2,10 +2,10 @@
 This is a frontend vanilla JS library for creating segmented progress bars
 
 ## Deployed App Link: 
-https://onurerenarpaci.github.io/spb-js-library/pub/example.html
+https://onurerenarpaci.github.io/spb-js-library/example.html
 
 ## Documentation
-https://onurerenarpaci.github.io/spb-js-library/pub/documentation.html
+https://onurerenarpaci.github.io/spb-js-library/documentation.html
 
 
 # Getting Started
