@@ -2,10 +2,10 @@
 This is a frontend vanilla JS library for creating segmented progress bars
 
 ## Deployed App Link: 
-https://still-cliffs-27435.herokuapp.com/example.html
+https://onurerenarpaci.github.io/spb-js-library/pub/example.html
 
 ## Documentation
-https://still-cliffs-27435.herokuapp.com/documentation.html
+https://onurerenarpaci.github.io/spb-js-library/pub/documentation.html
 
 
 # Getting Started
